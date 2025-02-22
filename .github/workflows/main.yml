@@ -1,0 +1,38 @@
+name: Sync Frontend and Backend
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # Runs every hour
+  push:
+    branches:
+      - main
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  sync_repositories:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout forked repository
+        uses: actions/checkout@v4
+
+      - name: Clone Frontend Repository from Sea-Venture
+        run: |
+          git clone --depth=1 --branch=main https://x-access-token:${{ secrets.GH_PAT }}@github.com/Sea-Venture/front-end.git frontend-temp
+          rm -rf frontend
+          mv frontend-temp frontend
+          rm -rf frontend/.git  # Remove Git history
+
+      - name: Clone Backend Repository from Sea-Venture
+        run: |
+          git clone --depth=1 --branch=main https://x-access-token:${{ secrets.GH_PAT }}@github.com/Sea-Venture/back-end.git backend-temp
+          rm -rf backend
+          mv backend-temp backend
+          rm -rf backend/.git  # Remove Git history
+
+      - name: Commit and Push Changes to Forked Repository
+        run: |
+          git config --global user.name "senaleevisal"
+          git config --global user.email "m.m.senaleevisal@gmail.com"
+          git add .
+          git diff --quiet && git diff --staged --quiet || git commit -m "Updated frontend and backend from main branch"
+          git push https://x-access-token:${{ secrets.GH_PAT }}@github.com/senaleevisal/GAHDSE241F-seaventures.git
