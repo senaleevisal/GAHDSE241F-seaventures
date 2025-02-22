@@ -15,16 +15,16 @@ jobs:
       - name: Checkout merged repo
         uses: actions/checkout@v4
 
-      - name: Clone Frontend Repository from SeaVentures
+      - name: Clone Frontend Repository from Sea-Venture
         run: |
-          git clone --depth=1 --branch=main https://x-access-token:${{ secrets.GH_PAT }}@github.com/SeaVentures/front-end.git frontend-temp
+          git clone --depth=1 --branch=main https://x-access-token:${{ secrets.GH_PAT }}@github.com/Sea-Venture/front-end.git frontend-temp
           rm -rf frontend
           mv frontend-temp frontend
           rm -rf frontend/.git  # Remove Git history
 
-      - name: Clone Backend Repository from SeaVentures
+      - name: Clone Backend Repository from Sea-Venture
         run: |
-          git clone --depth=1 --branch=main https://x-access-token:${{ secrets.GH_PAT }}@github.com/SeaVentures/back-end.git backend-temp
+          git clone --depth=1 --branch=main https://x-access-token:${{ secrets.GH_PAT }}@github.com/Sea-Venture/back-end.git backend-temp
           rm -rf backend
           mv backend-temp backend
           rm -rf backend/.git  # Remove Git history
