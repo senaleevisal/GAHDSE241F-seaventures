@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
-    {"offset": {"line": 9, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 15, "column": 0}, "map": {"version":3,"sources":["file://E%3A/HDFinalProject/code/front-end/src/app/components/ThemeRegistry.tsx"],"sourcesContent":["\"use client\";\r\n\r\nimport { ThemeProvider } from \"@mui/material/styles\";\r\nimport { CssBaseline } from \"@mui/material\";\r\nimport theme from \"../../theme\";\r\n\r\nexport default function ThemeRegistry({ children }: { children: React.ReactNode }) {\r\n  return (\r\n    <ThemeProvider theme={theme}>\r\n      <CssBaseline />\r\n      {children}\r\n    </ThemeProvider>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAIA;AAFA;AACA;AAHA;;;;;AAMe,SAAS,cAAc,EAAE,QAAQ,EAAiC;IAC/E,qBACE,6LAAC,2MAAA,CAAA,gBAAa;QAAC,OAAO,+GAAA,CAAA,UAAK;;0BACzB,6LAAC,4MAAA,CAAA,cAAW;;;;;YACX;;;;;;;AAGP;KAPwB"}},
-    {"offset": {"line": 50, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
