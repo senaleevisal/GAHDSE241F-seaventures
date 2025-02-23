@@ -1,4 +1,4 @@
-package controllers
+package controller
 
 import (
 	"net/http"
@@ -17,7 +17,7 @@ func RegisterUser(c *gin.Context) {
 		return
 	}
 
-	err := services.RegisterUser(&user)
+	err := service.RegisterUser(&user)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": "Could not create user"})
 		return
@@ -43,7 +43,7 @@ func LoginUser(c *gin.Context) {
 		return
 	}
 
-	err := services.Login(&user)
+	err := service.Login(&user)
 	if err != nil {
 		c.JSON(http.StatusUnauthorized, gin.H{"error": "Invalid credentials"})
 		return
