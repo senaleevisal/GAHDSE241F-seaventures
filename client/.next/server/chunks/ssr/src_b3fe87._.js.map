@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file://E%3A/HDFinalProject/code/front-end/src/theme.ts"],"sourcesContent":["import { createTheme } from '@mui/material/styles';\r\n\r\nconst theme = createTheme({\r\n  palette: {\r\n    primary: {\r\n      main: '#1976d2',\r\n    },\r\n    secondary: {\r\n      main: '#dc004e',\r\n    },\r\n  },\r\n});\r\n\r\nexport default theme;\r\n"],"names":[],"mappings":";;;AAAA;;AAEA,MAAM,QAAQ,CAAA,GAAA,oNAAA,CAAA,cAAW,AAAD,EAAE;IACxB,SAAS;QACP,SAAS;YACP,MAAM;QACR;QACA,WAAW;YACT,MAAM;QACR;IACF;AACF;uCAEe"}},
-    {"offset": {"line": 23, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 29, "column": 0}, "map": {"version":3,"sources":["file://E%3A/HDFinalProject/code/front-end/src/app/layout.tsx"],"sourcesContent":["import { ThemeProvider } from '@mui/material/styles';\r\nimport { CssBaseline } from '@mui/material';\r\nimport theme from '../theme';\r\n\r\nexport default function RootLayout({ children }: { children: React.ReactNode }) {\r\n  return (\r\n    <html lang=\"en\">\r\n      <body>\r\n        <ThemeProvider theme={theme}>\r\n          <CssBaseline />\r\n          {children}\r\n        </ThemeProvider>\r\n      </body>\r\n    </html>\r\n  );\r\n}\r\n"],"names":[],"mappings":";;;;AAEA;AAFA;AACA;;;;;AAGe,SAAS,WAAW,EAAE,QAAQ,EAAiC;IAC5E,qBACE,8OAAC;QAAK,MAAK;kBACT,cAAA,8OAAC;sBACC,cAAA,8OAAC,wMAAA,CAAA,gBAAa;gBAAC,OAAO,4GAAA,CAAA,UAAK;;kCACzB,8OAAC,yMAAA,CAAA,cAAW;;;;;oBACX;;;;;;;;;;;;;;;;;AAKX"}},
-    {"offset": {"line": 70, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
